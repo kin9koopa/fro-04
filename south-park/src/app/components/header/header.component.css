@@ -1,0 +1,91 @@
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #945B47;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Style the logo */
+.logo {
+    width: 75px; /* Adjust the size as needed */
+    height: auto;
+}
+
+/* Style the middle welcome message */
+.navbar-middle {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Style the navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    font-size: 16px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Change the color on hover as needed */
+}
+
+/* Style the search box */
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 200px; /* Adjust the width as needed */
+}
+
+.search button {
+    background-color: #BD022C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: #56DD12; /* Change the color on hover as needed */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-middle {
+        margin-top: 10px;
+    }
+
+    .navbar-right {
+        margin-top: 10px;
+    }
+
+    .search {
+        margin-top: 10px;
+    }
+}
