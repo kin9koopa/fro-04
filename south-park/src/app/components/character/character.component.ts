@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CharacterService } from 'src/app/character.service';
 
 @Component({
   selector: 'app-character',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./character.component.css']
 })
 export class CharacterComponent {
+  constructor(public characterService: CharacterService){}
+
+  handleSubmit(e: any){
+    
+  }
 
 }

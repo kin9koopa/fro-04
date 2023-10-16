@@ -1,7 +1,8 @@
-<div class="character-card">
+<div class="character-card" *ngFor="let character of characterService.characters">
     <img src="/assets/cartman.webp" alt="Character Image" class="character-image">
-    <h1 class="character-name">Eric Theodore Cartman</h1>
-    <p class="character-age">Age: 10</p>
-    <p class="character-nicknames">Occupation: Student</p>
-    <p class="character-nicknames">Birthday: July 1</p>
+    <h1 class="character-name">{{character.name}}</h1>
+    <p class="character-age">Age: {{character.age}}</p>
+    <p class="character-nicknames">Occupation: {{character.occupation}}</p>
+    <button (submit)="handleSubmit($event)" class="button-link">Select</button>
+
 </div>
