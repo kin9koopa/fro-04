@@ -6,6 +6,15 @@
     padding: 20px;
     text-align: center;
 }
+.title-sct {
+    text-align: center;
+}
+.main-sct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .character-image {
     max-width: 100%;

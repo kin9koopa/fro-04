@@ -1,13 +1,16 @@
 
-<div class="character-card" *ngFor="let character of characterService.characters">
-    <h3>{{titleSection}}</h3>
-    <img src="/assets/cartman.webp" alt="Character Image" class="character-image">
-    <h1 class="character-name">{{character.name}}</h1>
-    <p class="character-age">Age: {{character.age}}</p>
-    <p class="character-nicknames">Occupation: {{character.occupation}}</p>
-    <form (submit)="handleSubmit($event)">
-        <input name="titleSection" type="text" placeholder="Set New Title">
-        <button class="button-link" type="submit">Select</button>
+<h2 class="title-sct">{{titleSection}}</h2>
+<form (submit)="handleSubmit($event)">
+    <input name="titleSection" type="text" placeholder="Set New Title">
+    <button class="button-link" type="submit">Select</button>
 
-    </form>
+</form>
+<div class="main-sct">
+    <div class="character-card"  *ngFor="let character of characterService.characters">
+        <img src="/assets/cartman.webp" alt="Character Image" class="character-image">
+        <h1 class="character-name">{{character.name}}</h1>
+        <p class="character-age">Age: {{character.age}}</p>
+        <p class="character-nicknames">Occupation: {{character.occupation}}</p>
+        
+    </div>
 </div>
