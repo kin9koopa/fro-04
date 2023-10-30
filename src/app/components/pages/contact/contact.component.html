@@ -1,0 +1,142 @@
+<form
+  class="border border-dark p-3 rounded"
+  [formGroup]="contactForm"
+  (ngSubmit)="onSubmit()"
+>
+  <div class="row">
+    <div class="col text-center p-2 mb-3 bg-light">
+      <span class="fs-3">Contact Us</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="firstName" class="form-label">First Name: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        placeholder="John"
+        formControlName="firstName"
+        [class.invalid]="
+          contactForm.get('firstName')?.invalid &&
+          (contactForm.get('firstName')?.dirty ||
+            contactForm.get('firstName')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        *ngIf="
+          contactForm.get('firstName')?.invalid &&
+          (contactForm.get('firstName')?.dirty ||
+            contactForm.get('firstName')?.touched ||
+            isSubmitted)
+        "
+        >This is a required field</span
+      >
+    </div>
+    <div class="col">
+      <label for="lastName" class="form-label">Last Name: </label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        placeholder="Smith"
+        formControlName="lastName"
+        [class.invalid]="
+          contactForm.get('lastName')?.invalid &&
+          (contactForm.get('lastName')?.dirty ||
+            contactForm.get('lastName')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        *ngIf="
+          contactForm.get('firstName')?.invalid &&
+          (contactForm.get('firstName')?.dirty ||
+            contactForm.get('firstName')?.touched ||
+            isSubmitted)
+        "
+        >This is a required field</span
+      >
+    </div>
+    <div class="row">
+      <div class="col mb-2">
+        <label for="email" class="form-label">Email: </label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="johnsmith@gmail.com"
+          formControlName="email"
+          [class.invalid]="
+            contactForm.get('email')?.invalid &&
+            (contactForm.get('email')?.dirty ||
+              contactForm.get('email')?.touched ||
+              isSubmitted)
+          "
+        />
+        <span
+          *ngIf="
+            contactForm.get('firstName')?.invalid &&
+            (contactForm.get('firstName')?.dirty ||
+              contactForm.get('firstName')?.touched ||
+              isSubmitted)
+          "
+          >This is a required field</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          placeholder="555-5555"
+          formControlName="phone"
+          [class.invalid]="
+            contactForm.get('phone')?.invalid &&
+            (contactForm.get('phone')?.dirty ||
+              contactForm.get('phone')?.touched ||
+              isSubmitted)
+          "
+        />
+        <span
+          class="warning"
+          *ngIf="
+            contactForm.get('firstName')?.invalid &&
+            (contactForm.get('firstName')?.dirty ||
+              contactForm.get('firstName')?.touched ||
+              isSubmitted)
+          "
+          >This is a required field</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label for="message" class="form-label">Message:</label>
+        <textarea
+          id="message"
+          formControlName="message"
+          class="form-control"
+          rows="4"
+          [class.invalid]="
+            contactForm.get('message')?.invalid &&
+            (contactForm.get('message')?.dirty ||
+              contactForm.get('message')?.touched ||
+              isSubmitted)
+          "
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <div class="d-grid">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
